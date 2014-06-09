@@ -1,0 +1,160 @@
+// !$*UTF8*$!
+{
+	5A2ECB35163900700015A9AD /* GameBoardDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1130, 578}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 327}";
+		};
+	};
+	5A5AD6FD1637C57D0067D313 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 769C754516F89A4000B8B05C /* ChessGame */;
+		activeTarget = 5A5AD7051637C57D0067D313 /* ChessGame */;
+		codeSenseManager = 769C755E16F89A5600B8B05C /* Code sense */;
+		executables = (
+			769C754516F89A4000B8B05C /* ChessGame */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					952,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 385649643;
+			PBXWorkspaceStateSaveDate = 385649643;
+		};
+		perUserProjectItems = {
+			766D492C16FC8BF0003CF624 /* PBXTextBookmark */ = 766D492C16FC8BF0003CF624 /* PBXTextBookmark */;
+			766D492D16FC8BF0003CF624 /* PBXTextBookmark */ = 766D492D16FC8BF0003CF624 /* PBXTextBookmark */;
+			769C755316F89A5600B8B05C /* PBXBookmark */ = 769C755316F89A5600B8B05C /* PBXBookmark */;
+			769C755416F89A5600B8B05C /* PBXTextBookmark */ = 769C755416F89A5600B8B05C /* PBXTextBookmark */;
+			769C755516F89A5600B8B05C /* PBXTextBookmark */ = 769C755516F89A5600B8B05C /* PBXTextBookmark */;
+		};
+		sourceControlManager = 769C755D16F89A5600B8B05C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	5A5AD7051637C57D0067D313 /* ChessGame */ = {
+		activeExec = 0;
+		executables = (
+			769C754516F89A4000B8B05C /* ChessGame */,
+		);
+	};
+	5A5AD87F1637C60A0067D313 /* Constant.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1130, 1216}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 571}";
+		};
+	};
+	5AB498E5163A8D0A003F2860 /* ChessDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1130, 568}}";
+			sepNavSelRange = "{55, 0}";
+			sepNavVisRange = "{0, 229}";
+		};
+	};
+	766D492C16FC8BF0003CF624 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5AB498E5163A8D0A003F2860 /* ChessDelegate.h */;
+		name = "ChessDelegate.h: 5";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 229;
+		vrLoc = 0;
+	};
+	766D492D16FC8BF0003CF624 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5AB498E5163A8D0A003F2860 /* ChessDelegate.h */;
+		name = "ChessDelegate.h: 5";
+		rLen = 0;
+		rLoc = 55;
+		rType = 0;
+		vrLen = 229;
+		vrLoc = 0;
+	};
+	769C754516F89A4000B8B05C /* ChessGame */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ChessGame;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	769C755316F89A5600B8B05C /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 5AEF044C163AF28C00248833 /* AdvisorB.png */;
+	};
+	769C755416F89A5600B8B05C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5A5AD87F1637C60A0067D313 /* Constant.h */;
+		name = "Constant.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 571;
+		vrLoc = 0;
+	};
+	769C755516F89A5600B8B05C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 5A2ECB35163900700015A9AD /* GameBoardDelegate.h */;
+		name = "GameBoardDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 327;
+		vrLoc = 0;
+	};
+	769C755D16F89A5600B8B05C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	769C755E16F89A5600B8B05C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
