@@ -21,14 +21,18 @@
 -(id)init{
 	self = [super init];
 	if (self != nil) {
+        CGSize screenSize = [CCDirector sharedDirector].winSize;
+        CCSprite *back = [CCSprite spriteWithFile:@"black2.png"];
+        [self addChild:back];
+        [back setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
         self.isTouchEnabled = YES;
-		CGSize screenSize = [CCDirector sharedDirector].winSize;
-        tempBack = [CCSprite spriteWithFile:@"black2.png"];
-		CCSprite *background = [CCSprite spriteWithFile:@"black.png"];
+        alertView = [[UIAlertView alloc] initWithTitle:@"歡迎光臨屯門遊樂局！\n請輸入帳號密碼" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"登入", nil];
+        alertView.alertViewStyle = UIAlertViewStyleLoginAndPasswordInput;
+        [alertView show];
 		CCMenuItemFont *ChineseSmallChessButton = [CCMenuItemFont itemFromString:@"暗棋" target:self selector:@selector(runRoomScene)];
 //		CCMenuItemFont *ChineseChessButton = [CCMenuItemFont itemFromString:@"象棋" target:self selector:@selector(runChineseChessGame)];
 		//CCMenuItemFont *OriginalChessButton = [CCMenuItemFont itemFromString:@"五子棋" target:self selector:@selector(test)];
-		[ChineseSmallChessButton setColor:ccBLACK];
+		[ChineseSmallChessButton setColor:ccRED];
 		[ChineseSmallChessButton setScale:1.7f];
 //		[ChineseChessButton setColor:ccBLACK];
 //		[ChineseChessButton setScale:1.7f];
@@ -37,11 +41,7 @@
 		mainMenu = [CCMenu menuWithItems:ChineseSmallChessButton, nil];
 //		[mainMenu alignItemsVerticallyWithPadding:screenSize.width*0.02f];
 		[mainMenu setPosition:ccp(screenSize.width * 0.5f , screenSize.height * 0.5)];
-        [self addChild:tempBack z:10000];
-        [tempBack setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
 		[self addChild:mainMenu z:ZOrderMenuLayer];
-		[self addChild:background z:ZOrderBackground];
-		[background setPosition:ccp(screenSize.width*0.5, screenSize.height*0.5)];
 		//id delay = [CCDelayTime actionWithDuration:4];
 		//[self runAction: delay];
         
@@ -50,8 +50,27 @@
 	return self;
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+            CCLOG(@"使用者取消輸入");
+            break;
+        case 1:{
+            UITextField *uidTextField = [alertView textFieldAtIndex:0];
+            UITextField *pwdTextField = [alertView textFieldAtIndex:1];
+            [GameManager sharedGameManager].name = [NSString stringWithString:uidTextField.text];
+            [GameManager sharedGameManager].passwd = [NSString stringWithFormat:pwdTextField.text];
+            NSLog(@"name = %@" , [GameManager sharedGameManager].name);
+            CCLOG(@"passwd = %@" , [GameManager sharedGameManager].passwd);
+        }
+            break;
+        default:
+            break;
+    }
+}
+
 -(void)runRoomScene{
-    
+    [[GameManager sharedGameManager] loginButton];
     [[GameManager sharedGameManager] testListen];
     [[GameManager sharedGameManager] runSceneWithID:SceneRoomScene];
 }
@@ -71,12 +90,6 @@
 
 -(void)test{
 	CCLOG(@"test");
-}
-
--(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    self.isTouchEnabled = NO;
-    [tempBack removeFromParentAndCleanup:YES];
-    [[GameManager sharedGameManager] loginButton];
 }
 
 @end

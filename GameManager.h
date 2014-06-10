@@ -26,6 +26,9 @@
     
     NSOutputStream *oStream;
     NSInputStream *iStream;
+    
+    NSString *name;
+    NSString *passwd;
 }
 
 @property (readwrite) BOOL isMusicOn;
@@ -38,6 +41,9 @@
 
 @property (nonatomic,retain) NSOutputStream *oStream;;
 @property (nonatomic,retain) NSInputStream *iStream;
+
+@property (nonatomic,retain) NSString *name;
+@property (nonatomic,retain) NSString *passwd;
 
 +(GameManager *)sharedGameManager;
 -(void)runSceneWithID:(SceneTypes)sceneID;

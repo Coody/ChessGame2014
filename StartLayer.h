@@ -9,10 +9,12 @@
 #import "cocos2d.h"
 #import "CCLayer.h"
 #import "Constant.h"
+#import <UIKit/UIKit.h>
 
-@interface StartLayer : CCLayer{
+@interface StartLayer : CCLayer <UIAlertViewDelegate>{
 	CCMenu *mainMenu;
-    CCSprite *tempBack;
+    
+    UIAlertView *alertView;
 }
 
 @end

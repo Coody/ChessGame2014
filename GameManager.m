@@ -28,6 +28,9 @@ static GameManager *_sharedGameManager = nil;
 @synthesize iStream;
 @synthesize oStream;
 
+@synthesize name;
+@synthesize passwd;
+
 +(GameManager *)sharedGameManager{
 	@synchronized([GameManager class]){
 		if ( !_sharedGameManager ) {
@@ -68,7 +71,7 @@ static GameManager *_sharedGameManager = nil;
 	switch (sceneID) {
 		case SceneStart:
 			CCLOG(@"run Start Scene!!");
-			changeSceneAction = [CCTransitionFade transitionWithDuration:CHANGE_SCENE_TIME scene:[StartScene node]];
+			changeSceneAction = [CCTransitionFade transitionWithDuration:CHANGE_SCENE_TIME*0.1 scene:[StartScene node]];
 			break;
 		case SceneChineseSmallChess:
 			changeSceneAction = [CCTransitionFade transitionWithDuration:CHANGE_SCENE_TIME scene:[ChineseSmallChessGameScene node]];
@@ -108,14 +111,9 @@ static GameManager *_sharedGameManager = nil;
     NSURL *connect = [[NSURL alloc] initWithString:@"https://fgc.heapthings.com/api/getToken"];
     NSString *username;
     NSString *password;
-    if ( changePlayer ) {
-        username = @"test1@fcu.edu.tw";
-        password = @"test1";
-    }
-    else{
-        username = @"test2@fcu.edu.tw";
-        password = @"test2";
-    }
+    username = name;
+    password = passwd;
+    
     NSString *gameID = @"coody";
     NSString *httpBodyString=[NSString stringWithFormat:@"username=%@&password=%@&gameID=%@", username,password, gameID];
     
