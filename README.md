@@ -14,5 +14,5 @@ Chinese Chess Game with socket in iOS
 ``遊戲本身是連到 Server 組的「屯門遊樂園」，但應該課程上完沒多久就拔掉了（笑）。``
 
 ### 畫面：
-![遊戲畫面1]()
-![遊戲畫面2]()
+![遊戲畫面1](demo1.png)
+![遊戲畫面2](demo2.png)
