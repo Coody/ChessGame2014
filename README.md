@@ -1,5 +1,5 @@
 # ChessGame2014
-Chinese Chess Game with socket in iOS
+2014年逢甲大學軟體品質與測試課程期末專案
 
 ### 說明：
 2014 年在上軟體品質與軟體測試時，Client 端的象棋遊戲
